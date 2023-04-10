@@ -49,7 +49,7 @@ function cache(options) {
         };
     }
 
-    function put(name, data, cb) {
+    function put(name, data, cb = () => {}) {
         var entry = buildCacheEntry(data);
 
         if(persist)
