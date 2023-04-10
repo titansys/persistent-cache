@@ -141,7 +141,7 @@ function cache(options) {
         return data.data;
     }
 
-    function deleteEntry(name, cb) {
+    function deleteEntry(name, cb = () => {}) {
         if(ram) {
             delete memoryCache[name];
 
